@@ -13,23 +13,29 @@ ARG container_user_uid=1001
 ARG container_user_gid=1001
 
 # install packages and create user
-RUN apt-get update -y && \
-apt-get install -y gnupg2 && \
-apt-get update -y && \
-apt-get install -y --no-install-recommends unzip wget zip openjdk-11-jdk && \
-groupadd -g ${container_user_gid} ${container_user_group} &&\
-rm -rf /var/lib/apt/lists/* &&\
-wget https://archive.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz &&\
-tar -xzf apache-maven-3.8.8-bin.tar.gz && mv apache-maven-3.8.8 /usr/local/maven && rm apache-maven-3.8.8-bin.tar.gz &&\
-useradd -u ${container_user_uid} -g ${container_user_group} -s /bin/sh -m ${container_user} \
-&& mkdir -p /var/run/nginx /var/tmp/nginx \
-&& chown -R ${container_user}:${container_user} /usr/share/nginx /var/run/nginx /var/tmp/nginx
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        gnupg2 \
+        unzip \
+        wget \
+        zip \
+        ca-certificates \
+        openjdk-11-jdk && \
+    groupadd -g ${container_user_gid} ${container_user_group} && \
+    useradd -u ${container_user_uid} -g ${container_user_group} -s /bin/sh -m ${container_user} && \
+    mkdir -p /var/run/nginx /var/tmp/nginx && \
+    chown -R ${container_user}:${container_user} /usr/share/nginx /var/run/nginx /var/tmp/nginx && \
+    wget -O /tmp/maven.tar.gz https://archive.apache.org/dist/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz && \
+    tar -xzf /tmp/maven.tar.gz -C /usr/local && \
+    mv /usr/local/apache-maven-3.8.8 /usr/local/maven && \
+    rm /tmp/maven.tar.gz && \
+    rm -rf /var/lib/apt/lists/*
 
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
 ENV MAVEN_HOME /usr/local/maven
 ENV PATH $MAVEN_HOME/bin:$PATH
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 # set working directory for the user
 WORKDIR /home/${container_user}
