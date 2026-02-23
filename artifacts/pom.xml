@@ -243,7 +243,6 @@
                             <version>${biosdk-client.version}</version>
                             <outputDirectory>${biosdk-client.location}</outputDirectory>
                             <destFileName>${biosdk-client.fileName}</destFileName>
-                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for demosdk client -->
