@@ -165,6 +165,8 @@ COPY /src/icu4j/* ${icu4j_jar_path}/
 
 COPY /src/auth/* ${regproc_jar_path}/
 
+COPY /src/sms/* ${kernel_jar_path}/
+
 COPY ./configure.sh ${work_dir}/
 
 COPY pom.xml ${work_dir}/
