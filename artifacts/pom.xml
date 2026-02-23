@@ -53,15 +53,6 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <repository>
-            <id>mosip-repo</id>
-            <url>https://repo.mosip.io/repository/maven-public/</url>
-        </repository>
-        <repository>
-            <id>mosip-snapshot</id>
-            <url>https://repo.mosip.io/repository/maven-snapshots/</url>
-        </repository>
-
     </repositories>
 
     <distributionManagement>
@@ -124,7 +115,7 @@
         <mock-sdk.location>/usr/share/nginx/html/artifactory/libs-release-local/mock-sdk/1.1.5</mock-sdk.location>
         <mock-sdk.fileName>mock-sdk.jar</mock-sdk.fileName>
         <!-- mock-sdk-jpeg-extractor -->
-        <mock-sdk-jpeg-extractor.version>1.2.0</mock-sdk-jpeg-extractor.version>
+		<mock-sdk-jpeg-extractor.version>1.2.0.1-SNAPSHOT</mock-sdk-jpeg-extractor.version>
         <mock-sdk-jpeg-extractor.location>/usr/share/nginx/html/artifactory/libs-release-local/jpeg-mock-sdk/1.1.5
         </mock-sdk-jpeg-extractor.location>
         <mock-sdk-jpeg-extractor-lib.location>
