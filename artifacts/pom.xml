@@ -46,9 +46,8 @@
         </repository>
         <repository>
             <id>ossrh</id>
-            <name>MavenSnapshot</name>
-            <url>https://oss.sonatype.org/content/repositories/oss-snapshots</url>
-            <layout>default</layout>
+            <name>OSSRH Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -58,7 +57,7 @@
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
