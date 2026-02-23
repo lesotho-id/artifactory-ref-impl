@@ -262,7 +262,6 @@
                             <version>${mock-sdk-jpeg-extractor.version}</version>
                             <outputDirectory>${mock-sdk-jpeg-extractor.location}</outputDirectory>
                             <destFileName>${mock-sdk-jpeg-extractor.fileName}</destFileName>
-                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for mock-sdk-jpeg-extractor lib-->
@@ -280,7 +279,6 @@
                             <version>${mock-sdk-jpeg-extractor.version}</version>
                             <outputDirectory>${mock-sdk-jpeg-extractor-lib.location}</outputDirectory>
                             <destFileName>${mock-sdk-jpeg-extractor.fileName}</destFileName>
-                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for biosdk library -->
@@ -299,7 +297,6 @@
                             <version>${mock-sdk-latest.version}</version>
                             <outputDirectory>${biosdk-client-lib.location}</outputDirectory>
                             <destFileName>${mock-sdk.fileName}</destFileName>
-                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for childauthfilter jar -->
