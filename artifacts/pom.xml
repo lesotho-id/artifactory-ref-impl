@@ -115,7 +115,7 @@
         <mock-sdk.location>/usr/share/nginx/html/artifactory/libs-release-local/mock-sdk/1.1.5</mock-sdk.location>
         <mock-sdk.fileName>mock-sdk.jar</mock-sdk.fileName>
         <!-- mock-sdk-jpeg-extractor -->
-		<mock-sdk-jpeg-extractor.version>1.2.0.1-SNAPSHOT</mock-sdk-jpeg-extractor.version>
+        <mock-sdk-jpeg-extractor.version>1.2.0.1-SNAPSHOT</mock-sdk-jpeg-extractor.version>
         <mock-sdk-jpeg-extractor.location>/usr/share/nginx/html/artifactory/libs-release-local/jpeg-mock-sdk/1.1.5
         </mock-sdk-jpeg-extractor.location>
         <mock-sdk-jpeg-extractor-lib.location>
@@ -243,7 +243,7 @@
                             <version>${biosdk-client.version}</version>
                             <outputDirectory>${biosdk-client.location}</outputDirectory>
                             <destFileName>${biosdk-client.fileName}</destFileName>
-					<classifier>jar-with-dependencies</classifier>
+                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for demosdk client -->
@@ -263,7 +263,7 @@
                             <version>${mock-sdk-jpeg-extractor.version}</version>
                             <outputDirectory>${mock-sdk-jpeg-extractor.location}</outputDirectory>
                             <destFileName>${mock-sdk-jpeg-extractor.fileName}</destFileName>
-					<classifier>jar-with-dependencies</classifier>
+                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for mock-sdk-jpeg-extractor lib-->
@@ -281,11 +281,11 @@
                             <version>${mock-sdk-jpeg-extractor.version}</version>
                             <outputDirectory>${mock-sdk-jpeg-extractor-lib.location}</outputDirectory>
                             <destFileName>${mock-sdk-jpeg-extractor.fileName}</destFileName>
-					<classifier>jar-with-dependencies</classifier>
+                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for biosdk library -->
-                        <!-- Commented as per discussion. as jar with dependencies will have components of jar as well.
+                        <!-- Commented as per discussion. as jar with dependencies will have components of jar as well. -->
                                         <artifactItem>
                                             <groupId>io.mosip.mock.sdk</groupId>
                                             <artifactId>mock-sdk</artifactId>
@@ -293,14 +293,14 @@
                                              <outputDirectory>${biosdk-client-lib.location}</outputDirectory>
                                             <destFileName>${mock-sdk.fileName}</destFileName>
                                             <type>jar</type>
-                                        </artifactItem>	-->
+                                        </artifactItem>
                         <artifactItem>
                             <groupId>io.mosip.mock.sdk</groupId>
                             <artifactId>mock-sdk</artifactId>
                             <version>${mock-sdk-latest.version}</version>
                             <outputDirectory>${biosdk-client-lib.location}</outputDirectory>
                             <destFileName>${mock-sdk.fileName}</destFileName>
-					<classifier>jar-with-dependencies</classifier>
+                            <classifier>jar-with-dependencies</classifier>
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for childauthfilter jar -->
