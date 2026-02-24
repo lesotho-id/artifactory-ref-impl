@@ -285,7 +285,7 @@
                             <type>jar</type>
                         </artifactItem>
                         <!-- artifactItem section for biosdk library -->
-                        <!-- Commented as per discussion. as jar with dependencies will have components of jar as well. -->
+                        <!-- Commented as per discussion. as jar with dependencies will have components of jar as well.
                                         <artifactItem>
                                             <groupId>io.mosip.mock.sdk</groupId>
                                             <artifactId>mock-sdk</artifactId>
@@ -293,7 +293,7 @@
                                              <outputDirectory>${biosdk-client-lib.location}</outputDirectory>
                                             <destFileName>${mock-sdk.fileName}</destFileName>
                                             <type>jar</type>
-                                        </artifactItem>
+                                        </artifactItem>	-->
                         <artifactItem>
                             <groupId>io.mosip.mock.sdk</groupId>
                             <artifactId>mock-sdk</artifactId>
