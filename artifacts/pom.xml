@@ -172,16 +172,7 @@
         </esignet-digital-credential-wrapper.fileName>
         <!-- latest mock-sdk -->
         <mock-sdk-latest.version>1.2.0.2</mock-sdk-latest.version>
-        <dependencies>
 
-            <dependency>
-                <groupId>io.mosip.mock.sdk</groupId>
-                <artifactId>mock-sdk-jpeg-extractor</artifactId>
-                <version>1.2.0.1-SNAPSHOT</version>
-                <classifier>jar-with-dependencies</classifier>
-            </dependency>
-
-        </dependencies>
     </properties>
 
     <build>
